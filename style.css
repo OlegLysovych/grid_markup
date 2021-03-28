@@ -177,7 +177,7 @@ body {
   border: 2px solid #fff;
 }
 .analysis__text a:hover .btn__show__more:after {
-  border-top: 32x solid #fff;
+  border-top: 2px solid #fff;
   border-right: 2px solid #fff;
 }
 
@@ -242,7 +242,6 @@ select {
   height: 50px;
   padding: 18px 25px;
   margin: 5px 0;
-  display: border-box;
   border: 1px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -261,7 +260,6 @@ select {
   height: 50px;
   padding: 18px 25px;
   margin: 5px 0;
-  display: border-box;
   border: 1px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -400,7 +398,6 @@ form input[type="tel"]:focus {
   width: 100%;
   padding: 22px 22px;
   margin-top: 31px;
-  display: border-box;
   border: 1px solid #515151;
   background-color: #515151;
   -webkit-transition: 0.5s;
