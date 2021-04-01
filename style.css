@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
+/* mobile styles */
+
 body {
   font-family: "Open Sans";
+  font-size: 13px;
   margin: 0;
   padding: 0;
 }
@@ -11,33 +14,31 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .mainblock {
   background: #de2b24;
-  min-height: 100vh;
   position: relative;
   height: max-content;
-  display: flex;
+  padding-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
   justify-content: center;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
+  margin-bottom: 10%;
 }
 
-.mainblock .mainblock__content {
-}
-
-.mainblock__content .container {
-}
 .container .mainblock__text {
-  padding-top: 110px;
+  padding-top: 50px;
   color: #fff;
   line-height: 0.9;
   text-align: center;
   position: relative;
   padding-bottom: 17px;
+  grid-column: 1/5;
+  grid-row: 1;
 }
 
 .mainblock__text::after {
@@ -50,28 +51,35 @@ body {
   bottom: 0;
 }
 .mainblock__text .mainblock__title {
-  font-size: 36px;
+  font-size: 1.3em;
   font-weight: 900;
 }
 
 .mainblock__text .mainblock__subtitle {
-  font-size: 26px;
+  font-size: 1.1em;
   font-weight: 300;
 }
 
 .container .mainblock__featured_works {
-  margin: 47px 0 47px 0;
+  margin-top: 20px;
+  margin-bottom: 20%;
+  padding-bottom: 20%;
   overflow: hidden;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
 .works__column {
+  justify-self: center;
+  text-align: center;
   position: relative;
-  min-height: 370px;
-  height: 500px;
-  width: 250px;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .works__column a {
@@ -79,42 +87,36 @@ body {
 }
 
 .works__column .works__item__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(243, 94, 89);
-  height: 50%;
+  height: 100%;
   text-align: center;
   color: #fff;
+  display: grid;
+  align-items: center;
+  align-content: center;
 }
 
 .works__item__text:hover {
   background-color: rgba(196, 81, 77, 0.85);
 }
 
-.works__item__text .item__text__logo {
-  /* padding-top: 25%; */
-}
-
 .works__item__text .item__text__title {
-  font-size: 26px;
+  font-size: 1.2em;
   font-weight: 900;
   line-height: 1.2;
 }
 
 .works__item__text .item__text__subtitle {
-  font-size: 16px;
+  font-size: 0.8em;
   font-weight: 600;
   line-height: 1.2;
 }
 
 .works__column .works__item__photo {
-  height: 50%;
+  height: 100%;
   overflow: hidden;
 }
 .works__column .works__item__photo img {
-  display: block;
   width: 100%;
   height: inherit;
   transition: transform 0.5s;
@@ -124,46 +126,34 @@ body {
   transform: scale(1.1);
 }
 
-/* Facebook analysis blue section */
+/* Facebook analysis blue section ==================================================================================================================================*/
 
 .facebook__analysis {
   background: #1287bf;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
   height: max-content;
-
-  display: flex;
-  justify-content: center;
-  flex: 1 1 auto;
-}
-
-.analysis__content {
-}
-
-.analysis__content .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .container .analysis__text {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 0;
   color: #fff;
   line-height: 1;
   text-align: center;
   position: relative;
   padding-bottom: 18px;
+  grid-column: 1/5;
+  grid-row: 1;
 }
 
 .analysis__text .analysis__title {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .analysis__text .analysis__subtitle {
-  font-size: 21px;
+  font-size: 1em;
   font-weight: 300;
 }
 
@@ -183,8 +173,8 @@ body {
 
 .btn__show__more {
   display: inline-block;
-  width: 45px;
-  height: 45px;
+  width: 22.5px;
+  height: 22.5px;
   border: 3px solid #fff;
   border-radius: 50%;
   margin-bottom: 50px;
@@ -194,8 +184,8 @@ body {
   content: "";
   display: inline-block;
   margin-top: 25%;
-  width: 13px;
-  height: 13px;
+  width: 6.5px;
+  height: 6.5px;
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
   -moz-transform: rotate(135deg);
@@ -206,29 +196,29 @@ body {
 .detailes__form::before {
   content: "";
   display: block;
+  display: inline-block;
+  text-align: center;
+  align-self: center;
   border: 30px solid;
   border-color: transparent transparent #fff transparent;
   position: absolute;
-  margin: -58px;
+  margin-top: -58px;
+  margin-left: -30px;
+  left: 50%;
 }
 
 .detailes__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
   border-radius: 5px;
-  width: 65%;
   background-color: #fff;
+  grid-column: 2/4;
+  justify-self: center;
+  margin-bottom: 5%;
 }
 .detailes__form .form__desc {
-  margin: 0 50px 50px 50px;
+  margin: 0 10% 5% 10%;
   color: #828282;
-  font-size: 13px;
+  font-size: 0.7em;
   text-align: center;
-}
-
-.form {
 }
 
 .form form {
@@ -239,7 +229,7 @@ body {
 .form form input[type="text"],
 select {
   width: 100%;
-  height: 50px;
+  height: 30px;
   padding: 18px 25px;
   margin: 5px 0;
   border: 1px solid #ccc;
@@ -257,7 +247,7 @@ form input[type="text"]:focus {
 .form form input[type="tel"],
 select {
   width: 100%;
-  height: 50px;
+  height: 30px;
   padding: 18px 25px;
   margin: 5px 0;
   border: 1px solid #ccc;
@@ -275,8 +265,8 @@ form input[type="tel"]:focus {
 .form form input[type="submit"] {
   background-color: #de2b24;
   color: white;
-  padding: 17px 30px;
-  margin-top: 37px;
+  padding: 8.5px 15px;
+  margin-top: 18.5px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -289,11 +279,12 @@ form input[type="tel"]:focus {
 
 .close__form {
   position: relative;
-  left: 50%;
-  top: -22.5px;
+  left: 100%;
+  top: -11px;
+  margin-left: -11px;
   display: block;
-  width: 45px;
-  height: 45px;
+  width: 22.5px;
+  height: 22.5px;
   border: 3px solid #fff;
   background-color: #de2b24;
   border-radius: 50%;
@@ -306,9 +297,9 @@ form input[type="tel"]:focus {
 .close__form:before,
 .close__form:after {
   position: absolute;
-  margin: 7px 0 10px 21.5px;
+  margin: 3px 0 5px 10.5px;
   content: "";
-  height: 33px;
+  height: 17px;
   width: 2px;
   background-color: #fff;
 }
@@ -321,41 +312,36 @@ form input[type="tel"]:focus {
   transform: rotate(-45deg);
 }
 
-/* Social networks GREY AREA 3th scren */
+/* Social networks GREY AREA 3th scren ====================================================================================================*/
 
 .get__in__touch {
   background: #2a2a2a;
   position: relative;
   overflow: hidden;
   padding-bottom: 86px;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-}
-
-.get__in__touch .container {
 }
 
 .get__in__touch__title {
   margin: 90px 0 0 0;
-  font-size: 26px;
   color: #fff;
   font-weight: bold;
   line-height: 0.759;
   text-align: center;
+  grid-column: 1/5;
 }
 
 .touch__social__networks {
   margin: 31px 0 0 0;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  grid-column: 2/4;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
   justify-content: center;
 }
 
 .networks__logo {
   position: relative;
-  margin: 0 24px 0 0;
   padding: 20px;
   width: 15px;
   height: 15px;
@@ -376,21 +362,20 @@ form input[type="tel"]:focus {
 }
 
 .get__int__touch__mail_title {
+  grid-row: 3;
+  grid-column: 2/4;
   margin: 38px 0 0 0;
-  font-size: 18px;
   color: #cecece;
   font-weight: 400;
   text-align: center;
 }
 
 .mail__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-column: 2/4;
+  grid-row: 4;
 }
 
 .mail__form form {
-  width: 44%;
   text-align: center;
 }
 
@@ -421,23 +406,172 @@ form input[type="tel"]:focus {
   border-radius: 3px;
   cursor: pointer;
   font-weight: 750;
-  font-size: large;
 }
 
 .mail__form form input[type="submit"]:hover {
   background-color: #5f5f5f;
 }
 
-/* Footer */
+/* Footer ===============================================================================================================*/
 
 footer {
   text-align: center;
   padding: 20px;
   background-color: #515151;
   color: #cecece;
+  font-size: 0.8em;
 }
 
 footer a {
   color: #cecece;
   text-decoration: none;
+}
+
+
+
+/*IPhone 5s-5-se*/
+@media screen and (max-width: 330px)
+{
+  .touch__social__networks {
+    grid-template-columns: repeat(4, 80px);
+    row-gap: 5px;
+  }
+  
+  .networks__logo {
+    position: relative;
+    grid-column: span 2;
+  }
+  
+}
+
+/* small tablets styles */
+@media screen and (min-width: 524px) {
+  body {
+    font-size: 17px;
+  }
+
+  .btn__show__more {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn__show__more:after {
+    width: 9px;
+    height: 9px;
+  }
+
+  .form form input[type="submit"] {
+    padding: 11px 20px;
+    margin-top: 24px;
+  }
+
+  .touch__social__networks {
+    grid-template-columns: repeat(4, 100px);
+  }  
+}
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 17px;
+  }
+
+  .container .mainblock__text {
+    padding-top: 80px;
+  }
+
+  .btn__show__more {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn__show__more:after {
+    width: 13px;
+    height: 13px;
+  }
+
+  .container .analysis__text {
+    margin-top: 70px;
+  }
+
+  .form form input[type="submit"] {
+    padding: 17px 30px;
+    margin-top: 34px;
+  }
+
+  .close__form {
+    top: -22.5px;
+    margin-left: -22.5px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .close__form:before,
+  .close__form:after {
+    margin: 7px 0 10px 21px;
+    height: 34px;
+  }
+}
+
+/* large tablets and laptops */
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    margin-bottom: 0;
+  }
+
+  .container .mainblock__text {
+    padding-top: 100px;
+  }
+
+  .container .mainblock__featured_works {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    }
+
+  .works__column {
+    grid-column: span 1;
+    height: 370px;
+  }
+
+  .container .analysis__text {
+    margin-top: 100px;
+  }
+  .detailes__form {
+    max-width: 65%;
+  }
+
+  .mail__form {
+    width: 65%;
+    justify-self: center;
+  }
+  .mail__form form {
+    text-align: center;
+  }
+  
+}
+
+/* desktop styles */
+@media screen and (min-width: 1100px) {
+  body {
+    font-size: 20px;
+  }
+
+  .mainblock {
+    min-height: 100vh;
+  }
+
+  .facebook__analysis {
+    min-height: 100vh;
+  }
+
+  .container .mainblock__text {
+    padding-top: 110px;
+  }
+
+  .works__column {
+    grid-column: span 1;
+    height: 500px;
+  }
 }
