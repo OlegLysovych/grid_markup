@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Some page</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" href="./style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      function showForm() {
-       document.getElementById("detailes__form__hiden").hidden = false;
-       document.getElementById("link").hidden = true;
-      }
-     </script>
-  </head>
-  <body>
     <div class="wrapper">
       <div class="mainblock">
         <div class="mainblock__content">
@@ -124,5 +109,3 @@
         <p><a href="https://cssauthor.com/">Cssauthor.com </a>&#169; 2014 All Rights Reserved</p>
       </footer>
     </div>
-  </body>
-</html>
